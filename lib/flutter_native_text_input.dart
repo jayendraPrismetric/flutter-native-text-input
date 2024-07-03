@@ -277,8 +277,8 @@ class _NativeTextInputState extends State<NativeTextInput> {
       widget.focusNode ?? (_focusNode ??= FocusNode());
 
   bool get _isMultiline => widget.maxLines == 0 || widget.maxLines > 1;
-  double _lineHeight = 22.0;
-  double _contentHeight = 22.0;
+  double _lineHeight = 50.0;
+  double _contentHeight = 50.0;
 
   @override
   void initState() {
