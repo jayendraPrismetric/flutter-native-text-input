@@ -63,7 +63,7 @@ internal class NativeTextInput(context: Context, id: Int, creationParams: Map<St
 
         if (creationParams.get("lineSpacing") != null) {
             val lineSpacing = creationParams.get("lineSpacing") as Double
-            editText.setLineSpacing(lineSpacing.toFloat(), 2.0f)
+            editText.setLineSpacing(lineSpacing.toFloat(), 5.0f)
         }
 
         if (creationParams.get("fontWeight") != null &&
