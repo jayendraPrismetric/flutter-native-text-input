@@ -36,7 +36,7 @@ internal class NativeTextInput(context: Context, id: Int, creationParams: Map<St
         scaledDensity = context.resources.displayMetrics.scaledDensity
 
         editText = EditText(context)
-        //editText.setBackgroundResource(R.drawable.edit_text_background)
+        editText.setBackgroundResource(R.drawable.edit_text_background)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
             editText.setTextCursorDrawable(R.drawable.edit_text_cursor)
         }
@@ -59,6 +59,11 @@ internal class NativeTextInput(context: Context, id: Int, creationParams: Map<St
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
                 editText.lineHeight = fontSize.toInt()
             }
+        }
+
+        if (creationParams.get("lineSpacing") != null) {
+            val lineSpacing = creationParams.get("lineSpacing") as Double
+            editText.setLineSpacing(lineSpacing.toFloat(), 2.0f)
         }
 
         if (creationParams.get("fontWeight") != null &&
