@@ -75,7 +75,7 @@ class HomePage extends StatelessWidget {
           DemoItem(
             title: 'NativeTextInput Example Usage',
             child: Container(
-              height: 30,
+              height: 300,
               child: NativeTextInput(
                 decoration: BoxDecoration(
                   border: Border.all(
@@ -84,11 +84,13 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 style: const TextStyle(
-                  fontSize: 16,
+                  fontSize: 26,
                   color: Colors.black54,
                 ),
                 minHeightPadding: 4,
-                textCapitalization: TextCapitalization.sentences,
+                minLines: 10,
+                maxLines: 10,
+                //textCapitalization: TextCapitalization.none,
                 placeholder: "placeholder",
                 placeholderColor: Colors.black12,
                 iosOptions: IosOptions(
@@ -107,9 +109,9 @@ class HomePage extends StatelessWidget {
             ),
           ),
           Center(
-            child: FlatButton(
-                color: Colors.blue,
-                colorBrightness: Brightness.dark,
+            child: ElevatedButton(
+              /*  color: Colors.blue,
+                colorBrightness: Brightness.dark,*/
                 child: const Text("View More Use Cases"),
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(

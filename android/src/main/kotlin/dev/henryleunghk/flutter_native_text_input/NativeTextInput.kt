@@ -66,7 +66,7 @@ internal class NativeTextInput(context: Context, id: Int, creationParams: Map<St
             editText.setLineSpacing(lineSpacing.toFloat(), 2.0f)
         }
 */
-        editText.setLineSpacing(10.0f, 10.0f)
+        editText.setLineSpacing(4.0f, 1.5f)
 
         if (creationParams.get("fontWeight") != null &&
                 android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.P) {
